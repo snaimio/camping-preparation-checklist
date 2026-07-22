@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background: #1a1a1a;
+  font-family: 'Press Start 2P', monospace;
+}
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
+  background: #2d2d2d;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+#counter {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 5px 0;
+  padding: 15px;
+  background: #3a3a3a;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  text-shadow: 1px 1px 2px #000;
+  color: #fafafa;
+}
+#controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+.thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.thumb:hover {
+  transform: scale(1.05);
+  border-color: #4ecdc4;
+  box-shadow: 0 0 15px #4ecdc4;
+}
+.thumb.checked {
+  border-color: #10b981;
+  opacity: 0.7;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+#reset {
+  text-align: center;
+  padding: 2px;
+}
+#goCampingBtn {
+  background: #6d8c6d;
+  color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 18px 40px;
+  font-size: 1.4rem;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#goCampingBtn:hover {
+  background: #5a725a;
+  transform: scale(1.05);
+}
+#goCampingBtn.goMode {
+  background: #10b981;
+  border-color: #e1eec3;
+}
+#goCampingBtn.goMode:hover {
+  background: #0da271;
+  transform: scale(1.05);
+}
+.campingBody {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+}
+.campingMain {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  background: #2d2d2d;
+  padding: 50px;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin: 20px auto;
+}
+.campingTitle {
+  font-family: 'Press Start 2P', monospace;
+  color: #e1eec3;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.campingSubtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.campingImage {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  margin: 25px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.goBackBtn {
+  display: inline-block;
+  background: #6d8c6d;
+  color: #fff;
+  padding: 18px 40px;
+  font-size: 1.4rem;
+  font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.goBackBtn:hover {
+  background: #5a725a;
+}
+@media (max-width: 900px) {
+  #controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  #controls {
+    grid-template-columns: 1fr;
+  }
+}
